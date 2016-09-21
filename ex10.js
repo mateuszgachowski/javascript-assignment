@@ -57,7 +57,6 @@ function JamesBond(target, method) {
     return this;
 }
 
-
 var bond = JamesBond(console, 'error');
 
 bond.enableLogging(); // optional
