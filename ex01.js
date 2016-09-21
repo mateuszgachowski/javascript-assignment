@@ -21,14 +21,12 @@ var power = _.partial(function (exponent) {
     return 2 << (exponent - 1);
 
     // Normal pow using Math lib, slower but more convinient outside 0-30 range
-    // If using Math.pow we could use lodash _.bind for partially passed args
-    // as in functions below
     // return Math.pow(2, exponent);
 });
 
-var powerTwo = _.partial(_.bind(Math.pow, Math, _, 2));
+var powerTwo = _.partial(Math.pow, _, 2);
 
-var powerThree = _.partial(_.bind(Math.pow, Math, _, 3));
+var powerThree = _.partial(Math.pow, _, 3);
 
 
 console.log(addFiveAndSixAnd(4)); //15 (adds 5 + 6 + 4 = 15)
