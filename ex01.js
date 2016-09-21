@@ -2,13 +2,8 @@
 var _ = require('lodash');
 
 var addFiveAndSixAnd = _.partial(function () {
-    // Function can take more than one param and sum them all together
-    var args = Array.prototype.slice.call(arguments);
-
-    args.push(5, 6);
-
-    return _.sum(args);
-});
+    return _.sum(arguments);
+}, 5, 6);
 
 var power = _.partial(function (exponent) {
     // Exponent of two is much faster (from ~70% to even ~80%) for numbers in range 0 to 30
