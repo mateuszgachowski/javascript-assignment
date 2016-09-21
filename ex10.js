@@ -57,12 +57,12 @@ function JamesBond(target, method) {
     return this;
 }
 
-var bond = JamesBond(console, 'error');
+var agent007 = JamesBond(console, 'error');
 
-bond.enableLogging(); // optional
+agent007.enableLogging(); // optional
 
 console.error('calling console.error M');
 console.error('calling console.error I');
 console.error('calling console.error 6');
 
-console.log(bond.count); // 3
+console.log(agent007.count); // 3
