@@ -1,7 +1,9 @@
 // you have array of groups.
 // you need to display them in two panels: confirmed and unconfirmed.
 // in each panel groups will be displayed in rows by two.
-// Prepare your data in such a way, that you will have two arrays - one for confirmed, one for unconfirmed - and in each array you will have group ids grouped in arrays of two elements.
+// Prepare your data in such a way, that you will have two arrays - one for
+// confirmed, one for unconfirmed - and in each array you will have group ids
+// grouped in arrays of two elements.
 
 // don't use loops, use as many lodash functions as you can.
 
@@ -18,8 +20,15 @@ var groups = [
   { 'id': 8, 'name': 'Octarine', 'confirmed': true }
 ];
 
-var group = function(groups){
-  /* your code here */
+var group = function(groups) {
+  // Partition groups by confirmed and not confirmed
+  var partitionedGroups = _.partition(groups, 'confirmed');
+
+  // Get their ids and chunk by two
+  // This may be a one-liner but its better to read within a function
+  return _.map(partitionedGroups, function (group) {
+      return _.chunk(_.map(group, 'id'), 2);
+  });
 }
 
 console.log( group(groups) );
