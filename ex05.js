@@ -30,7 +30,7 @@ var sampleData = [
     {
         message: 'Donec leo tellus, gravida ut ex quis.'
     }
-]
+];
 
 function getShortMessages(messages) {
 
@@ -39,7 +39,7 @@ function getShortMessages(messages) {
             return element.message;
         })
         .filter(function(message) {
-            return message.length < 50
+            return message.length < 50;
         });
 }
 

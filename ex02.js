@@ -27,9 +27,9 @@ var group = function(groups) {
   // Get their ids and chunk by two
   // This may be a one-liner but its better to read within a function
   return _.map(partitionedGroups, function (group) {
-      return _.chunk(_.map(group, 'id'), 2);
+    return _.chunk(_.map(group, 'id'), 2);
   });
-}
+};
 
 console.log( group(groups) );
 // [ [ [ 2, 5 ], [ 6, 7 ], [ 8 ] ], [ [ 1, 3 ], [ 4 ] ] ]

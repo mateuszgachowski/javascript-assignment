@@ -12,12 +12,13 @@ var powerPow = _.partial(function (exponent) {
 
 
 // Test suite
-var suite = new Benchmark.Suite;
-suite.add('Shift bit', function() {
-    power(30)
+var suite = new Benchmark.Suite();
+suite
+.add('Shift bit', function() {
+    power(30);
 })
-suite.add('Math pow', function() {
-    powerPow(30)
+.add('Math pow', function() {
+    powerPow(30);
 })
 .on('cycle', function(event) {
     console.log(String(event.target));

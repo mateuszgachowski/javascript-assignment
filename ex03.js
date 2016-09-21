@@ -22,7 +22,7 @@ var map = _.curry(function(fn, collection){
 
 var nicePrint = function(chr) {
   return chr.user + ' is ' + chr.age;
-}
+};
 
 /* --- */
 var youngest = _.flow([sort('age'), _.first, nicePrint]);

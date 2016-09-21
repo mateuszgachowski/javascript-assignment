@@ -24,7 +24,8 @@ var countWords = function (inputWords) {
         wordList[word] = (wordList[word] + 1) || 1;
         return wordList;
     }, {});
-}
+};
+
 var inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian'];
 
 console.log(countWords(inputWords));
